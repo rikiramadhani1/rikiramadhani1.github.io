@@ -7,9 +7,24 @@ body {
     margin-top: 30px;
 }
 
+.jumbotron {
+    height: 400;
+    background-image: url('img/bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -100px;
+    color: #eaeaea;
+    overflow: hidden;
+}
+
 .jumbotron img {
     width: 200px;
-    border: 5px solid #666;
+    border: 5px solid #eaeaea;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+
+.jumbotron h1, .jumbotron p {
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
 }
 
 hr {
@@ -21,8 +36,36 @@ section {
     min-height: 600px;
 }
 
+.left, .right {
+    opacity: 0;
+    transform: translate(-50px, 0) rotate(10deg);
+    transition: 1s;
+}
+
+.right {
+    transform: translate(50px, 0) rotate(-10deg);;
+}
+
+.left.pView, .right.pView {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+
+
 .portfolio {
     background-color: #eee;
+}
+
+.portfolio .thumbnail {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: .5s;
+}
+
+.portfolio .thumbnail.view {
+    opacity: 1;
+    transform: translate(0,0);
 }
 
 .contact {
