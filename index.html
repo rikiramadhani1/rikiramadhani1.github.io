@@ -194,16 +194,17 @@
                             <input type="text" id="telp" name="telp" class="form-control"
                                 placeholder="Masukkan no. telepon">
                         </div>
-                        <select class="form-control">
+                        <select class="form-control" name="kategori">
                             <option>-- Pilih Kategori --</option>
                             <option>Web Design</option>
                             <option>Backend</option>
                         </select>
                         <div class="form-group">
                             <label for=pesan>Pesan</label>
-                            <textarea class="form-control" rows="10" placeholder="Masukkan pesan"></textarea>
+                            <textarea class="form-control" rows="10" placeholder="Masukkan pesan" name="pesan"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                        <button type="submit" class="btn btn-primary" id="my-form-button">Kirim Pesan</button>
+                        <p id="my-form-status"></p>
                     </form>
                 </div>
             </div>
@@ -292,3 +293,21 @@
 </body>
 
 </html>
+
+
+<!-- <form
+  action="https://formspree.io/mpzozjjp"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <label>
+    Your email:
+    <input type="text" name="_replyto">
+  </label>
+  <label>
+    Your file:
+    <input type="file" name="upload">
+  </label>
+
+  <button type="submit">Send</button>
+</form> -->
