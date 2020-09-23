@@ -182,7 +182,7 @@
                     <form id="my-form" action="https://formspree.io/mpzozjjp" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="nama">Nama</label>
-                            <input type="text" id="nama" name="nama" class="form-control" placeholder="Masukkan nama">
+                            <input type="text" id="participant" name="nama" class="form-control" placeholder="Masukkan nama">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -255,13 +255,14 @@
           // Success and Error functions for after the form is submitted
           
           function success() {
+            var participant = document.getElementById("participant").value;
             form.reset();
             button.style = "display: none ";
-            status.innerHTML = "Thanks!";
+            alert(`Thank You ${participant}.`)
           }
       
           function error() {
-            status.innerHTML = "Oops! There was a problem.";
+            alert("Oops! There was a problem.")
           }
       
           // handle the form submission event
